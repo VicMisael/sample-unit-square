@@ -3,17 +3,18 @@
 #include <SDL2/SDL.h>
 
 #include "equidistant_point_sampler.h"
-/*
+
 constexpr int screenwidthheight = 400;
 int main(int argc, char** argv)
 {
+	SDL_Window* win = nullptr;
+	win = SDL_CreateWindow("RayCaster", 100, 100, screenwidthheight, screenwidthheight, 0);
+	SDL_Renderer* renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED);
+	SDL_Texture* framebuffer = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_ABGR8888, SDL_TEXTUREACCESS_STREAMING,
+	screenwidthheight, screenwidthheight);
 	bool run = true;
 	while (run) {
-		SDL_Window* win = nullptr;
-		win = SDL_CreateWindow("RayCaster", 100, 100, screenwidthheight, screenwidthheight, 0);
-		SDL_Renderer* renderer = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED);
-		SDL_Texture* framebuffer = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_ABGR8888, SDL_TEXTUREACCESS_STREAMING,
-			screenwidthheight, screenwidthheight);
+
 
 		int Cw = screenwidthheight;
 		int Ch = screenwidthheight;
@@ -58,4 +59,3 @@ int main(int argc, char** argv)
 		}
 	}
 }
-*/
